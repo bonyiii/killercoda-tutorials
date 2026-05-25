@@ -1,0 +1,56 @@
+{
+  "title": "Ruby Objektum Orientáció — Házépítési hasonlat",
+  "description": "Tanuld meg a Ruby OOP alapjait egy házépítési hasonlaton keresztül. 9 interaktív lépésben építsd fel a tudásod!",
+  "details": {
+    "intro": {
+      "title": "Bevezetés",
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "steps": [
+      {
+        "title": "1. Minden Épuletanyag",
+        "text": "step1.md"
+      },
+      {
+        "title": "2. Tervrajzok vs. Valódi Házak",
+        "text": "step2.md"
+      },
+      {
+        "title": "3. Öröklodés — IS-A",
+        "text": "step3.md"
+      },
+      {
+        "title": "4. Mixinek — HAS-A",
+        "text": "step4.md"
+      },
+      {
+        "title": "5. Enkapszuláció",
+        "text": "step5.md"
+      },
+      {
+        "title": "6. Polimorfizmus",
+        "text": "step6.md"
+      },
+      {
+        "title": "7. Duck Typing",
+        "text": "step7.md"
+      },
+      {
+        "title": "8. Metódus Keresési Út",
+        "text": "step8.md"
+      },
+      {
+        "title": "9. Gyors Referencia",
+        "text": "step9.md"
+      }
+    ],
+    "finish": {
+      "title": "Befejezés",
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
