@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class House
   attr_accessor :address, :rooms, :color
 

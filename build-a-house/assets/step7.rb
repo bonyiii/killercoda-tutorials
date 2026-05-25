@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class SmartLight
   def connect
     "Light: WiFi connected"

@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class Kitchen
   def use_room
     "Cooking a delicious meal"

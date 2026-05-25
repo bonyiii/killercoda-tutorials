@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module Insurable
   BASE_RATE = 0.03
 

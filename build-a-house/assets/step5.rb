@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class SmartHome
   def front_door_status
     "Front door is locked"

@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module Solarable
   def energy_efficiency
     "Solar: A++"

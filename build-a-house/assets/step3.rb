@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class Building
   attr_accessor :area, :material, :floors
 
