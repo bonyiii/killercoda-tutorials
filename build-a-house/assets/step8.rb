@@ -1,30 +1,17 @@
 # encoding: utf-8
 
-module Solarable
+module SolarHeating
   def energy_efficiency
-    "Solar: A++"
-  end
-end
-
-module Insurable
-  def energy_efficiency
-    "Insurance: requires inspection"
+    "100% renewable"
   end
 end
 
 class Building
   def energy_efficiency
-    "Building: standard"
+    "30% renewable"
   end
 end
 
 class House < Building
-  include Solarable
-  include Insurable
-end
-
-class House
-  def energy_efficiency
-    "House: energy star certified"
-  end
+  include SolarHeating
 end

@@ -8,4 +8,6 @@ echo "export RUBYOPT=-Eutf-8:utf-8" >> /root/.bashrc
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export RUBYOPT=-Eutf-8:utf-8
-echo "Locale kész."
+echo "Locale beállítva."
+
+while [ ! -f /tmp/.ruby-ready ]; do sleep 1; done && echo "Ruby kész!"

@@ -1,6 +1,6 @@
 # 1. Minden Épuletanyag
 
-> **Alapelv:** A ház MINDEN alkatrésze épületanyag — téglától a csavarig. Ruby-ban MINDEN érték objektum. Nincsenek primitív típusok!
+> **Alapelv:** Minden alkatrész a házban építőanyag — tégla, csempe, csavar. Ruby-ban MINDEN érték egy objektum. Nincsenek primitív típusok — minden az `Object` osztályból öröklődik.
 
 ## Interaktív Ruby (IRB) használata
 
@@ -12,7 +12,7 @@ IRB-ben töltheted be őket:
 3. Használd az osztályokat:
 
 ```ruby
-h = House.new("123 Ruby St", 3, "white")
+h = House.new("123 Ruby St", 3)
 puts h.describe
 ```
 

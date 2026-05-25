@@ -20,9 +20,7 @@ Ebben a gyakorlati scenarióban a Ruby OOP alapjait tanulod meg egy **házépít
 
 ## Kezdeti lépések
 
-A Ruby telepítése folyamatban van a háttérben. Várj, amíg kész lesz:
-
-`while [ ! -f /tmp/.ruby-ready ]; do sleep 1; done && echo "Ruby ready!"`{{exec}}
+A Ruby telepítése folyamatban van a háttérben. Várj, amíg kész.
 
 Ellenorizd a verziót:
 

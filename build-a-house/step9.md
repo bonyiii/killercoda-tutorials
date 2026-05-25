@@ -10,11 +10,11 @@ Az egyes lépések osztályai a `code/` mappában találhatók:
 |--------------------------|-----------------------------------|
 | `code/step2.rb`          | `House` osztály                   |
 | `code/step3.rb`          | `Building`, `House`, `Garage`     |
-| `code/step4.rb`          | `Insurable`, `Solarable`, mixinek |
-| `code/step5.rb`          | `SmartHome`, `SecureHouse`        |
+| `code/step4.rb`          | `SolarPanel` modul, mixinek       |
+| `code/step5.rb`          | `SmartHome` enkapszuláció         |
 | `code/step6.rb`          | `Kitchen`, `Bedroom`, polimorfizmus |
 | `code/step7.rb`          | Okos eszközök, Duck Typing        |
-| `code/step8.rb`          | Metódus keresési út               |
+| `code/step8.rb`          | Metódus keresés, eigenclass       |
 
 Betöltés IRB-ben: `load "/root/code/stepN.rb"` a kívánt lépés számával.
 
@@ -30,98 +30,118 @@ class House
   end
 
   def describe
-    "#{@address}, #{@rooms} rooms"
+    "House at #{@address} with #{@rooms} rooms"
   end
 end
 
-h = House.new("123 Ruby St", 4)
-puts h.describe
-puts "Getter: #{h.address}"
-h.address = "456 New St"   # setter
-puts "Változott: #{h.address}"
+my_house = House.new("123 Ruby Lane", 4)
+puts my_house.describe
 ```{{exec}}
 
 ## Öröklés (`<`) és super
 
 ```ruby
 class Building
-  def initialize(area)
+  attr_accessor :area, :material
+
+  def initialize(area, material)
     @area = area
+    @material = material
+  end
+
+  def structural_support
+    "Providing support with #{@material} structure"
   end
 end
 
 class House < Building
-  def initialize(area, rooms)
-    super(area)   # szülo konstruktor hívása
-    @rooms = rooms
+  def live_in
+    "Making it a cozy home"
   end
 end
 
-h = House.new(2500, 4)
-puts "IS-A? #{h.is_a?(Building)}"    # => true
-puts "Ősök: #{House.ancestors.first(3)}"
+house = House.new(2500, "concrete")
+puts house.structural_support
+puts "IS-A? #{house.is_a?(Building)}"
 ```{{exec}}
 
-## Mixinek (include / extend)
+## Mixinek (include)
 
 ```ruby
-module Printable
-  def print_details
-    "#{self.class}: #{respond_to?(:address) ? address : 'N/A'}"
+module SolarPanel
+  def generate_power
+    "Generating 5kW from solar energy"
   end
 end
 
 class House
-  include Printable  # példánymetódus
+  include SolarPanel
 end
 
-h = House.new("123 Ruby St", 4)
-puts h.print_details
+h = House.new
+puts h.generate_power
 ```{{exec}}
 
 ## Enkapszuláció
 
 ```ruby
-class Example
-  def public_meth; "public"; end
+class SmartHome
+  def house_number
+    "14"
+  end
 
   private
-  def private_meth; "private"; end
+  def my_bedroom
+    "Authorization required"
+  end
 
   protected
-  def protected_meth; "protected"; end
+  def shared_bathroom
+    "Available for family"
+  end
 end
 
-e = Example.new
-puts "Public: #{e.public_meth}"
-puts "Send bypass: #{e.send(:private_meth)}"
-puts "respond_to? public: #{e.respond_to?(:public_meth)}"
-puts "respond_to? private: #{e.respond_to?(:private_meth)}"
+home = SmartHome.new
+puts "Public: #{home.house_number}"
+puts "Send bypass: #{home.send(:my_bedroom)}"
 ```{{exec}}
 
 ## Polimorfizmus
 
 ```ruby
-class Dog
-  def speak; "Woof"; end
+class Kitchen
+  def use_room
+    "Készül az ebéd."
+  end
 end
 
-class Cat
-  def speak; "Meow"; end
+class Bedroom
+  def use_room
+    "Békésen alszom."
+  end
 end
 
-[Dog.new, Cat.new].each { |a| puts a.speak }
+def get_cozy(room)
+  puts room.use_room
+end
+
+get_cozy(Kitchen.new)
+get_cozy(Bedroom.new)
 ```{{exec}}
 
 ## Duck Typing
 
 ```ruby
 def make_sound(animal)
-  animal.speak  # Nem érdekel, mi az osztálya
+  animal.speak
 end
 
 class Duck
   def speak; "Quack"; end
+end
+
+class Dog
+  def speak; "Woof"; end
 end
 
 puts make_sound(Duck.new)
@@ -131,24 +151,50 @@ puts make_sound(Dog.new)
 ## Metódus keresés
 
 ```ruby
-module M; def foo; "M"; end; end
-class C; include M; end
-c = C.new
-puts c.foo                    # => "M"
-puts c.method(:foo).owner     # => M
-puts C.ancestors              # => [C, M, Object, Kernel, BasicObject]
+module SolarHeating
+  def energy_efficiency
+    "100% renewable"
+  end
+end
+
+class Building
+  def energy_efficiency
+    "30% renewable"
+  end
+end
+
+class House < Building
+  include SolarHeating
+end
+
+my_house = House.new
+puts my_house.energy_efficiency
+puts "Tulajdonos: #{my_house.method(:energy_efficiency).owner}"
+puts House.ancestors
+```{{exec}}
+
+## Eigenclass (Singleton)
+
+```ruby
+house_a = House.new
+def house_a.fire_pole
+  "Slides down!"
+end
+puts house_a.fire_pole
+
+house_b = House.new
+# puts house_b.fire_pole  # ERROR!
 ```{{exec}}
 
 ## Legfontosabb parancsok
 
 ```ruby
-# Gyakran használt reflektív metódusok
 puts 42.class                         # => Integer
 puts "abc".respond_to?(:upcase)        # => true
 puts "abc".methods.sort                # összes metódus
 puts "abc".method(:upcase).owner       # => String
-puts "abc".method(:upcase).source_location  # fájl + sor (ha elérheto)
-puts String.ancestors                  # keresési lánc
+puts House.ancestors                   # keresési lánc
+puts House.new(2500,"x").singleton_class.ancestors
 ```{{exec}}
 
 > **Gratulálok!** Most már ismered a Ruby OOP alapjait. Használd ezt a lapot puskaként a további Ruby programozáshoz! 🏠✨

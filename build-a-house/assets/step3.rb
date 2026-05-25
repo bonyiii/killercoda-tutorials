@@ -1,20 +1,15 @@
 # encoding: utf-8
 
 class Building
-  attr_accessor :area, :material, :floors
+  attr_accessor :area, :material
 
-  def initialize(area, material, floors = 1)
+  def initialize(area, material)
     @area = area
     @material = material
-    @floors = floors
-  end
-
-  def describe
-    "#{@area} sqft #{@material} building, #{@floors} floor(s)"
   end
 
   def structural_support
-    "Support: #{@material} structure"
+    "Providing support with #{@material} structure"
   end
 end
 

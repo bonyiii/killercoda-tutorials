@@ -9,37 +9,31 @@
 3. Próbáld ki:
 
 ```ruby
-h = House.new(2500, "concrete", 2)
-g = Garage.new(400, "wood")
-puts h.describe
-puts g.park_car
+house = House.new(2500, "concrete")
+puts house.structural_support
+garage = Garage.new(400, "wood")
+puts garage.park_car
 puts House.ancestors
 ```
 
 ## 3.1 Alap öröklodés — Építmények hierarchiája
 
-```ruby
-# ==== SZÜLO OSZTÁLY ====
-class Building
-  attr_accessor :area, :material, :floors
+A `Building` osztály tárolja a közös tulajdonságokat. Ruby-ban egy osztálynak csak egy közvetlen ose lehet.
 
-  def initialize(area, material, floors = 1)
+```ruby
+class Building
+  attr_accessor :area, :material
+
+  def initialize(area, material)
     @area = area
     @material = material
-    @floors = floors
-  end
-
-  def describe
-    "#{@area} sqft #{@material} building, #{@floors} floor(s)"
   end
 
   def structural_support
-    "Support: #{@material} structure"
+    "Providing support with #{@material} structure"
   end
 end
 
-# ==== GYERMEK OSZTÁLYOK (IS-A) ====
-# "<" = öröklés operátor
 class House < Building
   def live_in
     "Making it a cozy home"
@@ -52,19 +46,11 @@ class Garage < Building
   end
 end
 
-# ==== HASZNÁLAT ====
-h = House.new(2500, "concrete", 2)
-g = Garage.new(400, "wood")
+house = House.new(2500, "concrete")
+puts house.structural_support
+# => Providing support with concrete structure
 
-puts h.structural_support   # => Support: concrete structure
-puts h.describe             # => 2500 sqft concrete building, 2 floor(s)
-puts g.describe             # => 400 sqft wood building, 1 floor(s)
-puts h.live_in               # => Making it a cozy home
-puts g.park_car              # => Car parked safely
-
-# Típusellenorzés
-puts "h is_a? Building: #{h.is_a?(Building)}"   # => true (IS-A!)
-puts "g is_a? House: #{g.is_a?(House)}"         # => false
+puts "house is_a? Building: #{house.is_a?(Building)}"
 ```{{exec}}
 
 ## 3.2 Metódus felülírás + `super`
@@ -75,20 +61,18 @@ A gyermekosztály felülírhatja a szülo metódusait, és `super`-rel meghívha
 class House < Building
   attr_accessor :rooms
 
-  def initialize(area, material, floors, rooms)
-    super(area, material, floors)  # meghívja Building#initialize-t
+  def initialize(area, material, rooms)
+    super(area, material)
     @rooms = rooms
   end
 
   def describe
-    basic = super  # Building#describe eredménye
-    "#{basic}, #{@rooms} rooms"
+    "#{@area} sqft #{@material} house, #{@rooms} rooms"
   end
 end
 
-h = House.new(2500, "concrete", 2, 4)
+h = House.new(2500, "concrete", 4)
 puts h.describe
-# => "2500 sqft concrete building, 2 floor(s), 4 rooms"
 ```{{exec}}
 
 ## 3.3 Ancestors — Az osok lánca
@@ -98,17 +82,9 @@ puts House.ancestors
 # => [House, Building, Object, Kernel, BasicObject]
 ```{{exec}}
 
-Ez a **metódus keresési út**! Ruby itt keresi a metódusokat sorban:
+Ez a **metódus keresési út**: Ruby itt keresi a metódusokat sorban.
 
 1. **House** → 2. **Building** → 3. **Object** → 4. **Kernel** → 5. **BasicObject**
-
-Nézd meg, honnan jönnek a metódusok:
-
-```ruby
-h = House.new(2500, "concrete", 2, 4)
-puts "describe tulajdonosa: #{h.method(:describe).owner}"
-puts "structural_support tulajdonosa: #{h.method(:structural_support).owner}"
-```{{exec}}
 
 ## Összefoglalás
 

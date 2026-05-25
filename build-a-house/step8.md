@@ -1,6 +1,6 @@
 # 8. Metódus Keresési Út — Az Áramkör Követése
 
-> Hogyan találja meg a Ruby egy metódust? Kövesd az elektromos vezetékeket! Keresési sorrend: objektum → osztály → modulok → ososztály → ... → BasicObject.
+> Hogyan találja meg a Ruby egy metódust? Kövesd a ház rétegeit! Keresési sorrend: objektum → osztály → modulok → ososztály → ... → BasicObject.
 
 ## Kód betöltése IRB-ben
 
@@ -9,10 +9,10 @@
 3. Próbáld ki:
 
 ```ruby
-h = House.new(2500, "concrete", 2)
-puts h.energy_efficiency
+my_house = House.new
+puts my_house.energy_efficiency
 puts House.ancestors
-puts h.method(:energy_efficiency).owner
+puts my_house.method(:energy_efficiency).owner
 ```
 
 ## 8.1 Az Ancestors lánc
@@ -20,117 +20,72 @@ puts h.method(:energy_efficiency).owner
 Nézzük meg a teljes utat:
 
 ```ruby
-module Solarable
+module SolarHeating
   def energy_efficiency
-    "Solar: A++"
-  end
-end
-
-module Insurable
-  def energy_efficiency
-    "Insurance: requires inspection"
+    "100% renewable"
   end
 end
 
 class Building
   def energy_efficiency
-    "Building: standard"
+    "30% renewable"
   end
 end
 
 class House < Building
-  include Solarable
-  include Insurable  # Ez feljebb kerül az ancestors láncban!
+  include SolarHeating
 end
 
-# ==== A TELJES LÁNC: ====
+my_house = House.new
+puts my_house.energy_efficiency
+# => 100% renewable (SolarHeating elso a láncban)
+
 puts "Ancestors: #{House.ancestors}"
-# => [House, Insurable, Solarable, Building, Object, Kernel, BasicObject]
+# => [House, SolarHeating, Building, Object, Kernel, BasicObject]
 ```{{exec}}
 
-**A keresés balról jobbra halad!** Eloször a `House`-t nézi, aztán `Insurable`-t, aztán `Solarable`-t...
+**Az elso metódus, ami a láncban megtalálható, fog válaszolni.**
 
-## 8.2 Metódus keresés gyakorlatban
+## 8.2 Singleton metódusok (Eigenclass)
+
+Minden Ruby objektumnak van egy rejtett, saját osztálya — az **eigenclass**. Egyedi metódusokat készíthetsz, amik csak abban az egy objektumban léteznek.
 
 ```ruby
-h = House.new(2500, "concrete", 2)
+house_a = House.new
 
-# Melyik energy_efficiency fut le?
-puts h.energy_efficiency
-# => "Insurance: requires inspection"
-# (Insurable-ben találta meg eloször)
-
-# Ellenorzés: honnan jön a metódus?
-puts "Tulajdonos: #{h.method(:energy_efficiency).owner}"
-# => Insurable
-
-# Metódus felülírás a láncban:
-class House < Building
-  include Solarable
-  include Insurable
-
-  def energy_efficiency
-    "House: energy star certified"
-  end
+def house_a.fire_pole
+  "Slides down!"
 end
 
-h2 = House.new(2500, "concrete", 2)
-puts h2.energy_efficiency   # => "House: energy star certified"
-puts "Tulajdonos: #{h2.method(:energy_efficiency).owner}"  # => House
+puts house_a.fire_pole     # => Slides down!
+
+house_b = House.new
+# puts house_b.fire_pole   # ERROR! Csak house_a-n létezik
 ```{{exec}}
 
-## 8.3 Singleton metódusok — Egyedi kábelezés
-
-Csak EGY adott objektum kap egy metódust:
+Az eigenclass a keresési lánc legelső helyén áll:
 
 ```ruby
-special_house = House.new(5000, "stone", 3)
-
-def special_house.has_pool
-  "This house has a pool!"
-end
-
-# Csak ez az egy ház tud úszni:
-puts special_house.has_pool    # => "This house has a pool!"
-# puts h2.has_pool             # => NoMethodError!
-
-# A singleton osztály a keresési lánc LEGELSÉJE:
-puts "Singleton ancestors: #{special_house.singleton_class.ancestors}"
+puts house_a.singleton_class.ancestors.first(3)
 ```{{exec}}
 
-## 8.4 A teljes keresési sorrend
-
-```ruby
-class House < Building
-  include Solarable
-  include Insurable
-
-  def energy_efficiency
-    "House: standard"
-  end
-end
-
-h = House.new(2500, "concrete", 2)
-
-# Singleton metódus hozzáadása
-def h.energy_efficiency
-  "House (special): super efficient"
-end
-
-puts h.energy_efficiency
-puts "Tulajdonos: #{h.method(:energy_efficiency).owner}"
-```{{exec}}
-
-## Keresési sorrend összefoglaló
+## 8.3 A teljes keresési sorrend
 
 ```
-1. Singleton osztály (special_house egyedi metódusai)
+1. Singleton osztály (eigenclass) — egyedi metódusok
 2. Objektum osztálya (House)
-3. Include-olt modulok (fordított sorrend: Insurable, Solarable)
+3. Include-olt modulok (SolarHeating)
 4. Ososztály (Building)
 5. Object
 6. Kernel (include-olva Object által)
 7. BasicObject
 ```
 
-> **Extra:** `prepend` — modul beékelése AZ OSZTÁLY ELÉ: `class House; prepend Insurable; end` → Insurable megelozi House-t!
+## Metódusok tulajdonosának ellenőrzése
+
+```ruby
+my_house = House.new
+puts "energy_efficiency tulajdonosa: #{my_house.method(:energy_efficiency).owner}"
+```{{exec}}
+
+> **Extra:** `prepend` — modul beékelése AZ OSZTÁLY ELÉ: `class House; prepend SolarHeating; end` → SolarHeating m megelozi House-t!
