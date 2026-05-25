@@ -2,6 +2,18 @@
 
 > **"Ha kacsaként jár, kacsaként hápog — akkor kacsának hívjuk."** Bármi, ami Wi-Fi-re csatlakozik + hangra reagál = okos eszköz. Nem kell `OkosEszkoz` osztály!
 
+## Kód betöltése IRB-ben
+
+1. Indítsd el az IRB-t: `irb`{{exec}}
+2. Töltsd be: `load "code/step7.rb"`
+3. Próbáld ki:
+
+```ruby
+control_smart_device(SmartLight.new)
+control_smart_device(SmartThermostat.new)
+control_smart_device(SmartSpeaker.new)
+```
+
 ## 7.1 Duck Typing — Okos otthon példa
 
 ```ruby

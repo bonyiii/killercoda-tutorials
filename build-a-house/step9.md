@@ -2,6 +2,22 @@
 
 > Az elmúlt 8 lépés összefoglalása gyorsan használható kódrészletekkel. **Próbáld ki oket!**
 
+## Kódok betöltése
+
+Az egyes lépések osztályai a `code/` mappában találhatók:
+
+| Fájl                     | Tartalom                          |
+|--------------------------|-----------------------------------|
+| `code/step2.rb`          | `House` osztály                   |
+| `code/step3.rb`          | `Building`, `House`, `Garage`     |
+| `code/step4.rb`          | `Insurable`, `Solarable`, mixinek |
+| `code/step5.rb`          | `SmartHome`, `SecureHouse`        |
+| `code/step6.rb`          | `Kitchen`, `Bedroom`, polimorfizmus |
+| `code/step7.rb`          | Okos eszközök, Duck Typing        |
+| `code/step8.rb`          | Metódus keresési út               |
+
+Betöltés IRB-ben: `load "code/stepN.rb"` a kívánt lépés számával.
+
 ## Osztályok és példányok
 
 ```ruby

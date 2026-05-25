@@ -2,6 +2,20 @@
 
 > **Falak megóvják a magánszobákat.** Ruby hozzáférés-szabályozással: **Public** = nappali (bárki), **Protected** = családi fürdo (osztály + alosztályok), **Private** = háló (csak a tulajdonos).
 
+## Kód betöltése IRB-ben
+
+1. Indítsd el az IRB-t: `irb`{{exec}}
+2. Töltsd be: `load "code/step5.rb"`
+3. Próbáld ki:
+
+```ruby
+home = SmartHome.new
+puts home.front_door_status
+puts home.guest_wifi_password
+# home.unlock_door  # <- HIBA! private metódus
+puts home.send(:unlock_door)  # send megkerüli
+```
+
 ## 5.1 Három szint — Public / Protected / Private
 
 ```ruby

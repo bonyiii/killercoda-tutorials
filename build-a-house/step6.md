@@ -2,6 +2,20 @@
 
 > Különbözo szobák (objektumok) másképp reagálnak ugyanarra az üzenetre. A Ruby nem azt nézi, hogy MI AZ objektum, hanem hogy MIT TUD.
 
+## Kód betöltése IRB-ben
+
+1. Indítsd el az IRB-t: `irb`{{exec}}
+2. Töltsd be: `load "code/step6.rb"`
+3. Próbáld ki:
+
+```ruby
+get_cozy(Kitchen.new)
+get_cozy(Bedroom.new)
+
+rooms = [Kitchen.new, Bedroom.new, Bathroom.new]
+rooms.each { |r| puts r.use_room }
+```
+
 ## 6.1 Alap polimorfizmus
 
 ```ruby

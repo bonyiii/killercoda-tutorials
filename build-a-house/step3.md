@@ -2,6 +2,20 @@
 
 > **IS-A Kapcsolat:** Ház IS-A Épulet, Garázs IS-A Épulet. A közös kód a szüloben (`Building`), az egyedi a gyermekekben.
 
+## Kód betöltése IRB-ben
+
+1. Indítsd el az IRB-t: `irb`{{exec}}
+2. Töltsd be: `load "code/step3.rb"`
+3. Próbáld ki:
+
+```ruby
+h = House.new(2500, "concrete", 2)
+g = Garage.new(400, "wood")
+puts h.describe
+puts g.park_car
+puts House.ancestors
+```
+
 ## 3.1 Alap öröklodés — Építmények hierarchiája
 
 ```ruby

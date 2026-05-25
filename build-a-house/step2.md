@@ -2,6 +2,21 @@
 
 > **Osztály = Tervrajz (Blueprint). Példány = Valódi ház.** Egy tervből végtelen ház építheto.
 
+## Kód betöltése IRB-ben
+
+A lépés osztályai előre el vannak készítve:
+
+1. Indítsd el az IRB-t: `irb`{{exec}}
+2. Töltsd be a fájlt: `load "code/step2.rb"`
+3. Használd az osztályokat:
+
+```ruby
+h = House.new("123 Ruby St", 3, "white")
+puts h.describe
+h.paint("blue")
+puts h.describe
+```
+
 ## 2.1 Osztály definiálása — A tervrajz
 
 Egy `House` osztály létrehozása:

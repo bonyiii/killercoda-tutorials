@@ -2,6 +2,19 @@
 
 > Hogyan találja meg a Ruby egy metódust? Kövesd az elektromos vezetékeket! Keresési sorrend: objektum → osztály → modulok → ososztály → ... → BasicObject.
 
+## Kód betöltése IRB-ben
+
+1. Indítsd el az IRB-t: `irb`{{exec}}
+2. Töltsd be: `load "code/step8.rb"`
+3. Próbáld ki:
+
+```ruby
+h = House.new(2500, "concrete", 2)
+puts h.energy_efficiency
+puts House.ancestors
+puts h.method(:energy_efficiency).owner
+```
+
 ## 8.1 Az Ancestors lánc
 
 Nézzük meg a teljes utat:

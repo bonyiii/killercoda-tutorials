@@ -2,6 +2,19 @@
 
 > **HAS-A Kapcsolat:** A háznak VAN futesrendszere, VAN napeleme. Mixinek (modulok) = eloregyártott funkciók, amiket bármely osztály bekábelezhet.
 
+## Kód betöltése IRB-ben
+
+1. Indítsd el az IRB-t: `irb`{{exec}}
+2. Töltsd be: `load "code/step4.rb"`
+3. Próbáld ki:
+
+```ruby
+h = House.new(2500, "concrete", 2, "123 Ruby St")
+puts h.insurance_paperwork
+puts h.generate_power(6)
+puts Villa.total_buildings
+```
+
 ## 4.1 Modul definiálása
 
 Eloször definiáljuk az eloregyártott felszereléseket:

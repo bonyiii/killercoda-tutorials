@@ -2,6 +2,23 @@
 
 > **Alapelv:** A ház MINDEN alkatrésze épületanyag — téglától a csavarig. Ruby-ban MINDEN érték objektum. Nincsenek primitív típusok!
 
+## Interaktív Ruby (IRB) használata
+
+A további lépésekben új osztályokkal fogsz dolgozni — ezeket előre elkészítve megtalálod a `code/` mappában.  
+IRB-ben töltheted be őket:
+
+1. Indítsd el az IRB-t: `irb`{{exec}}
+2. Töltsd be a kívánt fájlt: `load "code/step2.rb"`
+3. Használd az osztályokat:
+
+```ruby
+h = House.new("123 Ruby St", 3, "white")
+puts h.describe
+```
+
+> **Tipp:** A `load` minden híváskor újratölti a fájlt — ha módosítod, elég újra `load`-olni.  
+> A `require` csak egyszer tölti be, utána figyelmen kívül hagyja a kérést, ezért IRB-ben a `load` a kényelmesebb.
+
 ## 1.1 Nézd meg bárminek az osztályát!
 
 Minden Ruby-értéken hívhatsz `.class`-t:
