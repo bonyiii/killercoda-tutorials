@@ -5,7 +5,7 @@
 ## Kód betöltése IRB-ben
 
 1. Indítsd el az IRB-t: `irb`{{exec}}
-2. Töltsd be: `load "code/step5.rb"`
+2. Töltsd be: `load "/root/code/step5.rb"`
 3. Próbáld ki:
 
 ```ruby

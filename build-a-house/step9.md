@@ -16,7 +16,7 @@ Az egyes lépések osztályai a `code/` mappában találhatók:
 | `code/step7.rb`          | Okos eszközök, Duck Typing        |
 | `code/step8.rb`          | Metódus keresési út               |
 
-Betöltés IRB-ben: `load "code/stepN.rb"` a kívánt lépés számával.
+Betöltés IRB-ben: `load "/root/code/stepN.rb"` a kívánt lépés számával.
 
 ## Osztályok és példányok
 

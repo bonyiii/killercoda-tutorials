@@ -7,7 +7,7 @@
 A lépés osztályai előre el vannak készítve:
 
 1. Indítsd el az IRB-t: `irb`{{exec}}
-2. Töltsd be a fájlt: `load "code/step2.rb"`
+2. Töltsd be a fájlt: `load "/root/code/step2.rb"`
 3. Használd az osztályokat:
 
 ```ruby

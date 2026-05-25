@@ -8,7 +8,7 @@ A további lépésekben új osztályokkal fogsz dolgozni — ezeket előre elké
 IRB-ben töltheted be őket:
 
 1. Indítsd el az IRB-t: `irb`{{exec}}
-2. Töltsd be a kívánt fájlt: `load "code/step2.rb"`
+2. Töltsd be a kívánt fájlt: `load "/root/code/step2.rb"`
 3. Használd az osztályokat:
 
 ```ruby

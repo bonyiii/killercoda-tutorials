@@ -48,6 +48,11 @@
     "finish": {
       "title": "Befejezés",
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*.rb", "target": "~/code/"}
+      ]
     }
   },
   "backend": {
