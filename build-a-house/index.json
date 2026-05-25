@@ -5,6 +5,7 @@
     "intro": {
       "title": "Bevezetés",
       "text": "intro.md",
+      "foreground": "foreground.sh",
       "background": "setup.sh"
     },
     "steps": [

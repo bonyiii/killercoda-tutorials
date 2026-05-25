@@ -4,11 +4,7 @@
 
 ## Interaktív Ruby (IRB) használata
 
-A további lépésekben új osztályokkal fogsz dolgozni
-
-A magyar ékezetes karakterek miatt eloször állítsd be a locale-ot:
-
-`export LANG=en_US.UTF-8 && export LC_ALL=en_US.UTF-8`{{exec}} — ezeket előre elkészítve megtalálod a `code/` mappában.  
+A további lépésekben új osztályokkal fogsz dolgozni — ezeket előre elkészítve megtalálod a `code/` mappában.  
 IRB-ben töltheted be őket:
 
 1. Indítsd el az IRB-t: `irb`{{exec}}

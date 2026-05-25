@@ -28,9 +28,7 @@ Ellenorizd a verziót:
 
 `ruby --version`{{exec}}
 
-Állítsd be a locale-ot UTF-8-ra (magyar ékezetes karakterek miatt):
-
-`export LANG=en_US.UTF-8 && export LC_ALL=en_US.UTF-8`{{exec}}
+A környezet automatikusan UTF-8-ra van állítva (LANG, LC_ALL, RUBYOPT), így az ékezetes karakterek gond nélkül muködnek.
 
 Indítsd el az interaktív Ruby konzolt (IRB) ha szeretnél kísérletezni:
 
