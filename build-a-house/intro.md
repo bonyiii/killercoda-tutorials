@@ -28,6 +28,10 @@ Ellenorizd a verziót:
 
 `ruby --version`{{exec}}
 
+Állítsd be a locale-ot UTF-8-ra (magyar ékezetes karakterek miatt):
+
+`export LANG=en_US.UTF-8 && export LC_ALL=en_US.UTF-8`{{exec}}
+
 Indítsd el az interaktív Ruby konzolt (IRB) ha szeretnél kísérletezni:
 
 `irb`{{exec}}
