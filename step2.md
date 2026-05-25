@@ -1,6 +1,6 @@
 # 2. Tervrajzok vs. Valódi Házak
 
-> **Osztály = Tervrajz (Blueprint). Példány = Valódi ház.** Egy tervbol végtelen ház építheto.
+> **Osztály = Tervrajz (Blueprint). Példány = Valódi ház.** Egy tervből végtelen ház építheto.
 
 ## 2.1 Osztály definiálása — A tervrajz
 
