@@ -14,5 +14,3 @@ until j == 5
   puts j
   j += 1
 end
-
-File.write('/tmp/.step_1_while_done', 'done')

@@ -1,6 +1,6 @@
-# Ruby Ciklusok és Iterátorok
+# Ciklusok és Iterátorok
 
-Üdvözöljük ebben a rövid interaktív tananyagban! A következő lépésekben megismerjük a Ruby legfontosabb ciklusait és iterátorait:
+A következő lépésekben megismerjük a Ruby legfontosabb ciklusait és iterátorait:
 
 - `while` / `until`
 - `for` / `times`
@@ -11,4 +11,10 @@
 - `upto`, `downto`, `step`
 - Zárójelek (blocks), `Proc` és `lambda`
 
-Minden lépéshez tartozik futtatható Ruby kód. A jobb oldali terminálban a `ruby <fájlnév>.rb` paranccsal próbálhatja ki a példákat.
+Ciklus: Ismételt végrehajtást futtató utasítás.
+Iterátor: Adathalmaz (jellemzően lista) bejárását végző utasítás.
+
+Iterátorokat ismétlődő feladatok megoldására használjuk. Pl: Írd le 100x...
+
+> Minden lépéshez tartozik futtatható Ruby kód. A jobb oldali terminálban a `ruby <fájlnév>.rb` paranccsal próbálhatja ki a példákat.
+> A fájlok változtatás után automatikusan mentésre kerülnek.
