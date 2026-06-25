@@ -1,0 +1,70 @@
+{
+    "title": "Ruby Ciklusok",
+    "description": "Ruby ciklusok, külső és belső iterátorok áttekintése",
+    "details": {
+        "intro": {
+            "title": "Bevezetés",
+            "text": "intro.md",
+            "foreground": "foreground.sh",
+            "background": "setup.sh"
+        },
+        "steps": [
+            {
+                "title": "1. while és until",
+                "text": "step_1_while.md",
+                "verify": "step_1_while_verify.sh"
+            },
+            {
+                "title": "2. for és times",
+                "text": "step_2_for.md",
+                "verify": "step_2_for_verify.sh"
+            },
+            {
+                "title": "3. each — Belső Iterátor",
+                "text": "step_3_each.md",
+                "verify": "step_3_each_verify.sh"
+            },
+            {
+                "title": "4. map és collect",
+                "text": "step_4_map.md",
+                "verify": "step_4_map_verify.sh"
+            },
+            {
+                "title": "5. select és reject",
+                "text": "step_5_select.md",
+                "verify": "step_5_select_verify.sh"
+            },
+            {
+                "title": "6. inject és reduce",
+                "text": "step_6_inject.md",
+                "verify": "step_6_inject_verify.sh"
+            },
+            {
+                "title": "7. upto, downto, step",
+                "text": "step_7_upto.md",
+                "verify": "step_7_upto_verify.sh"
+            },
+            {
+                "title": "8. Blocks, Proc és lambda",
+                "text": "step_8_blocks.md",
+                "verify": "step_8_blocks_verify.sh"
+            },
+            {
+                "title": "9. Gyors Referencia",
+                "text": "step_9_reference.md"
+            }
+        ],
+        "finish": {
+            "title": "Befejezés",
+            "text": "finish.md"
+        },
+        "assets": {
+            "host01": [
+                {"file": "*.rb", "target": "~/code/"}
+            ]
+        }
+    },
+    "backend": {
+        "imageid": "ubuntu"
+    }
+}
