@@ -2,8 +2,11 @@
 
 A következő lépésekben megismerjük a Ruby legfontosabb ciklusait és iterátorait:
 
+Ciklus: Ismételt végrehajtást futtató utasítás.
 - `while` / `until`
 - `for` / `times`
+
+Iterátor: Adathalmaz (jellemzően lista) bejárását végző utasítás.
 - `each` — a belső iterátorok alapja
 - `map` / `collect`
 - `select` / `reject`
@@ -11,8 +14,6 @@ A következő lépésekben megismerjük a Ruby legfontosabb ciklusait és iterá
 - `upto`, `downto`, `step`
 - Zárójelek (blocks), `Proc` és `lambda`
 
-Ciklus: Ismételt végrehajtást futtató utasítás.
-Iterátor: Adathalmaz (jellemzően lista) bejárását végző utasítás.
 
 Iterátorokat ismétlődő feladatok megoldására használjuk. Pl: Írd le 100x...
 
