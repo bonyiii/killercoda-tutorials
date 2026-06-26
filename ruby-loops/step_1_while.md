@@ -26,5 +26,4 @@ end
 
 Szerkessze a `~/code/step_1_challenge.rb` fájlt, és írjon egy `while` ciklust, amely **8-szor** kiírja: `Hello World!` — a lépés akkor teljesül, ha a ciklus 8-szor írja ki a `Hello World!` szöveget.
 
-
 > A fájl automatikusan mentődik, Ha végzett a feladattal kattintson a "CHECK" gombra.
