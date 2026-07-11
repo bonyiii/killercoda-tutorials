@@ -9,4 +9,4 @@ end
 puts "\n=== each_char ==="
 "ruby".each_char { |c| puts c.upcase }
 
-File.write('/tmp/.step_3_each_done', 'done')
+File.write('/tmp/.step_4_each_done', 'done')

@@ -7,4 +7,4 @@ puts "Összeg: #{osszeg}"
 sztring = ["R", "u", "b", "y"].reduce("") { |acc, c| acc + c }
 puts "Sztring: #{sztring}"
 
-File.write('/tmp/.step_6_inject_done', 'done')
+File.write('/tmp/.step_7_inject_done', 'done')

@@ -10,4 +10,4 @@ puts "lambda map: #{[2, 3, 4].map(&negyzet).inspect}"
 # Symbol to_proc rövidítés
 puts "Symbol &: #{['ruby', 'loops'].map(&:upcase).inspect}"
 
-File.write('/tmp/.step_8_blocks_done', 'done')
+File.write('/tmp/.step_9_blocks_done', 'done')

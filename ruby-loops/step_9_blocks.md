@@ -16,4 +16,4 @@ puts [2, 3, 4].map(&negyzet).inspect
 # => [4, 9, 16]
 ```
 
-> Próbálja ki: `ruby ~/code/step_8_blocks.rb` — a lépés akkor teljesül, ha a script lefut.
+> Próbálja ki: `ruby ~/code/step_9_blocks.rb` — a lépés akkor teljesül, ha a script lefut.

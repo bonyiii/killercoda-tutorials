@@ -1,6 +1,4 @@
 #!/usr/bin/env ruby
-# Feladat: Írjon egy for ciklust, amely végigmegy a 1..10 tartományon,
-# és kiírja: SZÁM: DUPLA  (pl. 1: 2, 2: 4, ... 10: 20)
+# 2. loop
 
-# TODO: for ciklus ide
-
+# Írjon egy loop ciklust, amely 5 alkalommal kiírja: "Ruby loop!"

@@ -9,4 +9,4 @@ puts duplazott.inspect
 negyzet = szamok.collect { |n| n ** 2 }
 puts negyzet.inspect
 
-File.write('/tmp/.step_4_map_done', 'done')
+File.write('/tmp/.step_5_map_done', 'done')

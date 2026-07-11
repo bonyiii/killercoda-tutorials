@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# 2. for és times
+# 3. for és times
 
 puts "=== for ==="
 for i in 1..5
@@ -11,4 +11,4 @@ puts "\n=== times ==="
   puts "Iteráció: #{i}"
 end
 
-File.write('/tmp/.step_2_for_done', 'done')
+File.write('/tmp/.step_3_for_done', 'done')

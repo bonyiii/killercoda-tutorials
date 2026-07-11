@@ -4,6 +4,7 @@ A következő lépésekben megismerjük a Ruby legfontosabb ciklusait és iterá
 
 Ciklus: Ismételt végrehajtást futtató utasítás.
 - `while` / `until`
+- `loop`
 - `for` / `times`
 
 Iterátor: Adathalmaz (jellemzően lista) bejárását végző utasítás.

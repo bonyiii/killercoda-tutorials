@@ -15,43 +15,48 @@
                 "verify": "step_1_while_verify.sh"
             },
             {
-                "title": "2. for és times",
-                "text": "step_2_for.md",
-                "verify": "step_2_for_verify.sh"
+                "title": "2. loop — Végtelen Ciklus",
+                "text": "step_2_loop.md",
+                "verify": "step_2_loop_verify.sh"
             },
             {
-                "title": "3. each — Belső Iterátor",
-                "text": "step_3_each.md",
-                "verify": "step_3_each_verify.sh"
+                "title": "3. for és times",
+                "text": "step_3_for.md",
+                "verify": "step_3_for_verify.sh"
             },
             {
-                "title": "4. map és collect",
-                "text": "step_4_map.md",
-                "verify": "step_4_map_verify.sh"
+                "title": "4. each — Belső Iterátor",
+                "text": "step_4_each.md",
+                "verify": "step_4_each_verify.sh"
             },
             {
-                "title": "5. select és reject",
-                "text": "step_5_select.md",
-                "verify": "step_5_select_verify.sh"
+                "title": "5. map és collect",
+                "text": "step_5_map.md",
+                "verify": "step_5_map_verify.sh"
             },
             {
-                "title": "6. inject és reduce",
-                "text": "step_6_inject.md",
-                "verify": "step_6_inject_verify.sh"
+                "title": "6. select és reject",
+                "text": "step_6_select.md",
+                "verify": "step_6_select_verify.sh"
             },
             {
-                "title": "7. upto, downto, step",
-                "text": "step_7_upto.md",
-                "verify": "step_7_upto_verify.sh"
+                "title": "7. inject és reduce",
+                "text": "step_7_inject.md",
+                "verify": "step_7_inject_verify.sh"
             },
             {
-                "title": "8. Blocks, Proc és lambda",
-                "text": "step_8_blocks.md",
-                "verify": "step_8_blocks_verify.sh"
+                "title": "8. upto, downto, step",
+                "text": "step_8_upto.md",
+                "verify": "step_8_upto_verify.sh"
             },
             {
-                "title": "9. Gyors Referencia",
-                "text": "step_9_reference.md"
+                "title": "9. Blocks, Proc és lambda",
+                "text": "step_9_blocks.md",
+                "verify": "step_9_blocks_verify.sh"
+            },
+            {
+                "title": "10. Gyors Referencia",
+                "text": "step_10_reference.md"
             }
         ],
         "finish": {
