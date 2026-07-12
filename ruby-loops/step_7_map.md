@@ -1,4 +1,4 @@
-# 4. `map` és `collect`
+# 7. `map` és `collect`
 
 A `map` (alias: `collect`) új tömböt ad vissza, ahol minden elemet a blokk eredménye helyettesít:
 
@@ -9,4 +9,4 @@ puts duplazott.inspect
 # => [2, 4, 6, 8]
 ```
 
-> Próbálja ki: `ruby ~/code/step_6_map.rb` — a lépés akkor teljesül, ha a script lefut.
+> Próbálja ki: `ruby ~/code/step_7_map.rb` — a lépés akkor teljesül, ha a script lefut.

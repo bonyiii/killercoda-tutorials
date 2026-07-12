@@ -1,13 +1,12 @@
 #!/usr/bin/env ruby
-# 4. for és times
+# 4. for
 
-puts "=== for ==="
+puts "=== for on range ==="
 for i in 1..5
   puts i
 end
 
-puts "\n=== times ==="
-5.times do |i|
-  puts "Iteráció: #{i}"
+puts "\n=== for on array ==="
+for elem in ["a", "b", "c"]
+  puts elem.upcase
 end
-

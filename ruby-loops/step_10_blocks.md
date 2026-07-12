@@ -1,4 +1,4 @@
-# 8. Blocks, `Proc` és `lambda`
+# 10. Blocks, `Proc` és `lambda`
 
 A Ruby ciklusok mögött mindig egy **blokk** áll, amit átadhatunk változóként is:
 

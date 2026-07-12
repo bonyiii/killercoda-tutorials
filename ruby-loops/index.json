@@ -24,34 +24,34 @@
                 "verify": "step_3_loop_verify.sh"
             },
             {
-                "title": "4. for és times",
+                "title": "4. for",
                 "text": "step_4_for.md",
                 "verify": "step_4_for_verify.sh"
             },
             {
-                "title": "5. each — Belső Iterátor",
-                "text": "step_5_each.md",
-                "verify": "step_5_each_verify.sh"
+                "title": "5. times, upto, downto, step",
+                "text": "step_5_upto.md",
+                "verify": "step_5_upto_verify.sh"
             },
             {
-                "title": "6. map és collect",
-                "text": "step_6_map.md",
-                "verify": "step_6_map_verify.sh"
+                "title": "6. each — Belső Iterátor",
+                "text": "step_6_each.md",
+                "verify": "step_6_each_verify.sh"
             },
             {
-                "title": "7. select és reject",
-                "text": "step_7_select.md",
-                "verify": "step_7_select_verify.sh"
+                "title": "7. map és collect",
+                "text": "step_7_map.md",
+                "verify": "step_7_map_verify.sh"
             },
             {
-                "title": "8. inject és reduce",
-                "text": "step_8_inject.md",
-                "verify": "step_8_inject_verify.sh"
+                "title": "8. select és reject",
+                "text": "step_8_select.md",
+                "verify": "step_8_select_verify.sh"
             },
             {
-                "title": "9. upto, downto, step",
-                "text": "step_9_upto.md",
-                "verify": "step_9_upto_verify.sh"
+                "title": "9. inject és reduce",
+                "text": "step_9_inject.md",
+                "verify": "step_9_inject_verify.sh"
             },
             {
                 "title": "10. Blocks, Proc és lambda",

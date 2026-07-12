@@ -1,18 +1,10 @@
-# 4. `for` és `times`
+# 4. `for`
 
 A `for` ciklus végigiterál egy tartományon vagy tömbön:
 
 ```ruby
 for i in 1..5
   puts i
-end
-```
-
-A `times` egy egyszerű számlálóciklus:
-
-```ruby
-5.times do |i|
-  puts "Iteráció: #{i}"
 end
 ```
 

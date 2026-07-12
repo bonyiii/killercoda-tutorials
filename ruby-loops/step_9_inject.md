@@ -1,4 +1,4 @@
-# 6. `inject` és `reduce`
+# 9. `inject` és `reduce`
 
 Az `inject` (alias: `reduce`) összegyűjti az elemeket egyetlen értékbe:
 
@@ -15,4 +15,4 @@ Sztringek összefűzése:
 # => "Ruby"
 ```
 
-> Próbálja ki: `ruby ~/code/step_8_inject.rb` — a lépés akkor teljesül, ha a script lefut.
+> Próbálja ki: `ruby ~/code/step_9_inject.rb` — a lépés akkor teljesül, ha a script lefut.

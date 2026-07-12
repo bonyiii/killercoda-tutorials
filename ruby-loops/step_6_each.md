@@ -1,4 +1,4 @@
-# 3. `each` — Belső Iterátor
+# 6. `each` — Belső Iterátor
 
 Az `each` a Ruby leggyakoribb iterátora. Nem kell kézzel kezelni a számlálót:
 
@@ -14,4 +14,4 @@ Sztring karakterein is végigmehetünk:
 "ruby".each_char { |c| puts c.upcase }
 ```
 
-> Próbálja ki: `ruby ~/code/step_5_each.rb` — a lépés akkor teljesül, ha a script lefut.
+> Próbálja ki: `ruby ~/code/step_6_each.rb` — a lépés akkor teljesül, ha a script lefut.
