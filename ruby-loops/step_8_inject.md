@@ -15,4 +15,4 @@ Sztringek összefűzése:
 # => "Ruby"
 ```
 
-> Próbálja ki: `ruby ~/code/step_7_inject.rb` — a lépés akkor teljesül, ha a script lefut.
+> Próbálja ki: `ruby ~/code/step_8_inject.rb` — a lépés akkor teljesül, ha a script lefut.

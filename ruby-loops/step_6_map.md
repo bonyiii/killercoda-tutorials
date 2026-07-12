@@ -9,4 +9,4 @@ puts duplazott.inspect
 # => [2, 4, 6, 8]
 ```
 
-> Próbálja ki: `ruby ~/code/step_5_map.rb` — a lépés akkor teljesül, ha a script lefut.
+> Próbálja ki: `ruby ~/code/step_6_map.rb` — a lépés akkor teljesül, ha a script lefut.

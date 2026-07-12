@@ -14,4 +14,4 @@ A `reject` pont az ellenkezőjét csinálja (kiveszi az igazakat):
 # => [1, 3, 5]
 ```
 
-> Próbálja ki: `ruby ~/code/step_6_select.rb` — a lépés akkor teljesül, ha a script lefut.
+> Próbálja ki: `ruby ~/code/step_7_select.rb` — a lépés akkor teljesül, ha a script lefut.

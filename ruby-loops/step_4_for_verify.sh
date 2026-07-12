@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Ellenőrzi, hogy a fájl tartalmaz-e 'for' kulcsszót
-if ! grep -q 'for' ~/code/step_3_challenge.rb; then
+if ! grep -q 'for' ~/code/step_4_challenge.rb; then
   echo "Hiba: Nem található 'for' kulcsszó a fájlban!"
   exit 1
 fi
 
 # Futtatja a scriptet
-OUTPUT=$(ruby ~/code/step_3_challenge.rb 2>&1)
+OUTPUT=$(ruby ~/code/step_4_challenge.rb 2>&1)
 
 # Ellenőrzi a 10 sort: 1: 2, 2: 4, ... 10: 20
 for i in $(seq 1 10); do

@@ -8,4 +8,4 @@ Ezek a numerikus osztály metódusai elegáns ciklusokat adnak:
 0.step(10, 2) { |i| print "#{i} " } # 0 2 4 6 8 10
 ```
 
-> Próbálja ki: `ruby ~/code/step_8_upto.rb` — a lépés akkor teljesül, ha a script lefut.
+> Próbálja ki: `ruby ~/code/step_9_upto.rb` — a lépés akkor teljesül, ha a script lefut.

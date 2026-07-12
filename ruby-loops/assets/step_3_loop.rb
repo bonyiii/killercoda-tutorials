@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# 2. loop
+# 3. loop
 
 puts "=== loop with break ==="
 i = 0
@@ -18,4 +18,3 @@ loop do
   break if j >= 7
 end
 
-File.write('/tmp/.step_2_loop_done', 'done')

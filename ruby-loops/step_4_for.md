@@ -1,4 +1,4 @@
-# 3. `for` és `times`
+# 4. `for` és `times`
 
 A `for` ciklus végigiterál egy tartományon vagy tömbön:
 
@@ -16,11 +16,11 @@ A `times` egy egyszerű számlálóciklus:
 end
 ```
 
-> Próbálja ki: `ruby ~/code/step_3_for.rb`
+> Próbálja ki: `ruby ~/code/step_4_for.rb`
 
 ## Feladat
 
-Szerkessze a `~/code/step_3_challenge.rb` fájlt, és írjon egy `for` ciklust, amely végigmegy a `1..10` tartományon. Minden számhoz írja ki: `SZÁM: SZÁM x 2`  
+Szerkessze a `~/code/step_4_challenge.rb` fájlt, és írjon egy `for` ciklust, amely végigmegy a `1..10` tartományon. Minden számhoz írja ki: `SZÁM: SZÁM x 2`  
 Például: `1: 2`, `2: 4`, `3: 6`, ... `10: 20` — a lépés akkor teljesül, ha a kimenet pontosan a fenti 10 sort tartalmazza.
 
 > A fájl automatikusan mentődik, Ha végzett a feladattal kattintson a "CHECK" gombra.
